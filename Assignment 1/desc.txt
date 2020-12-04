@@ -1,0 +1,19 @@
+1. $ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.9.tar.xz
+	command used to download Linux kernel source code.
+2. $ unxz -v linux-5.6.9.tar.xz
+	command for extracting the tar.xz file.
+3. $ cd linux-5.6.9
+	change directory to the unzipped folder
+4. $ cp -v /boot/config-$(uname -r) .config
+	command to configure the Linux kernel features.
+5. $ sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+	command to install development tools like GCC compilers and related tools, to compile the Linux kernel
+6. $ make menuconfig
+	command to configure the kernel. Can be used to enable or disable certain features or modules.
+7. $ make -j5
+	make command is used to compile and create a compressed kernel image. -j5 is passed to speed up the compile time. Build time depends on the system's resources such as available CPU core and current system load.
+8. $ sudo make modules_install
+	command to install Linux kernel modules
+9. $ sudo make install 
+	command to install the kernel
+	....
